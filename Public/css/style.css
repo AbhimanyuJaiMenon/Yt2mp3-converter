@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+  color: white;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.top-container {
+  height: 40vh;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+#form {
+  width: 600px;
+  height: 40vh;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+#form h1 {
+  font-style: italic;
+  text-shadow: 1px 1px darkgray;
+}
+
+#form input {
+  width: 300px;
+  padding: 14px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #444;
+  font-family: inherit;
+  outline: none;
+  box-shadow: 2px 2px 5px #00000088;
+}
+
+#form input::placeholder {
+  color: #999;
+}
+
+#form button {
+  padding: 14px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 2px 3px 5px #00000088;
+  border: none;
+  transition: 0.3s ease-out;
+}
+
+#form button:hover {
+  color: #0072ff;
+  background-color: white;
+  transform: scale(1.05);
+}
+
+.errors {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 12px;
+  color: #8b0000;
+  background-color: #ffcccc;
+  border: 1px solid #e60000;
+}
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff;
+}
+
+#download-btn {
+  width: fit-content;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px #00000088;
+  font-style: normal;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: inherit;
+  border: none;
+  transition: 0.3s ease-out;
+  color: white;
+}
+
+#download-btn:hover {
+  background: white;
+  color: #ff416c;
+  transform: scale(1.05);
+}
+
+@media(max-width:768px) {
+  .bottom-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  #form,
+  .success {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media(max-width:480px) {
+  #form input {
+    width: 50%;
+  }
+}
