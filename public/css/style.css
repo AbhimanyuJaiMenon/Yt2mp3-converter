@@ -16,6 +16,10 @@ body {
 .top-container {
   height: 40vh;
   background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bottom-container {
@@ -28,35 +32,45 @@ body {
 #form {
   width: 600px;
   height: 40vh;
-  margin: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 20px;
+  gap: 16px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.2);
 }
 
 #form h1 {
-  font-style: italic;
-  text-shadow: 1px 1px darkgray;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00c6ff;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 10px;
+}
+
+#form h4 {
+  font-weight: 400;
+  color: #ccc;
 }
 
 #form input {
   width: 300px;
   padding: 14px;
-  background-color: #1e1e1e;
+  background-color: #121212;
   color: #ffffff;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  border: 1px solid #444;
+  border: 2px solid #00c6ff;
   font-family: inherit;
   outline: none;
-  box-shadow: 2px 2px 5px #00000088;
+  box-shadow: 0 0 8px #00c6ff33;
 }
 
 #form input::placeholder {
-  color: #999;
+  color: #888;
 }
 
 #form button {
@@ -67,61 +81,59 @@ body {
   color: white;
   cursor: pointer;
   font-family: inherit;
-  box-shadow: 2px 3px 5px #00000088;
   border: none;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00c6ff55;
 }
 
 #form button:hover {
-  color: #0072ff;
-  background-color: white;
-  transform: scale(1.05);
+  color: #ffffff;
+  background-color: #0072ff;
+  transform: scale(1.08);
 }
 
 .errors {
   width: 400px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 5px;
-  padding: 12px;
-  color: #8b0000;
-  background-color: #ffcccc;
+  background-color: #ffe6e6;
   border: 1px solid #e60000;
+  color: #8b0000;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 8px #ff000033;
 }
 
 .success {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
   color: #ffffff;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 8px #00ffcc44;
 }
 
 #download-btn {
-  width: fit-content;
-  padding: 12px;
+  padding: 12px 24px;
   background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  border-radius: 5px;
-  text-decoration: none;
-  box-shadow: 2px 2px 5px #00000088;
-  font-style: normal;
-  cursor: pointer;
-  letter-spacing: 1px;
-  font-family: inherit;
-  border: none;
-  transition: 0.3s ease-out;
   color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #ff4b2b55;
+  cursor: pointer;
 }
 
 #download-btn:hover {
   background: white;
-  color: #ff416c;
-  transform: scale(1.05);
+  color: #ff4b2b;
+  transform: scale(1.08);
 }
 
 @media(max-width:768px) {
@@ -139,6 +151,10 @@ body {
 
 @media(max-width:480px) {
   #form input {
-    width: 50%;
+    width: 60%;
+  }
+
+  #form button {
+    width: 40%;
   }
 }
